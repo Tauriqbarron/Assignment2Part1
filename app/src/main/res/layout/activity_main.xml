@@ -13,8 +13,8 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="88dp"
         android:ems="10"
+        android:hint="Enter Word Here "
         android:inputType="textPersonName"
-        android:text="Enter Word Here "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
