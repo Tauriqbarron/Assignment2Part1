@@ -26,5 +26,9 @@ dependencies {
     testImplementation 'junit:junit:4.13-beta-2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation fileTree(dir: 'C:\\Users\\tauri\\Documents\\Assignment2Part1', include: ['*.aar', '*.jar'], exclude: [])
+    implementation fileTree(dir: 'C:\\Users\\tauri\\Documents\\Assignment2Part1\\jsonp_1.1_api', include: ['*.aar', '*.jar'], exclude: [])
+    implementation fileTree(dir: 'C:\\Users\\tauri\\Documents\\Assignment2Part1\\jsonp_1.1_api\\main\\java\\javax\\json', include: ['*.aar', '*.jar'], exclude: [])
+
 
 }
