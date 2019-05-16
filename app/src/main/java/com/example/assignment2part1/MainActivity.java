@@ -19,17 +19,12 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import org.json.*;
-
 import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.json.Json;
+import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.json.JsonString;
@@ -67,18 +62,18 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         StringBuilder txtResult = new StringBuilder();
                         String resp = response;
+                        searchResult.setText("");
                         try {
-                            JsonObject res = JS
-                            JSONArray defArray = res.getJSONArray("definitions");
+                            JsonObject res = jsonFromString(resp);
+                            JsonArray defArray = res.getJsonArray("definitions");
 
-                            for(int idx = 0; idx< defArray.length(); idx++){
-                                JSONObject curDef = defArray.getJSONObject(idx);
-                                JSONObject definition = curDef.getJSONObject("definition");
-                                txtResult.append(definition.getString("definition")+"/n");
-                            }
-                        }catch (Throwable t){
-                            Log.e("Error","Could not parse");
-                        }
+                           for(int idx = 0; idx< (defArray.size()-1); idx++){
+                               JsonObject curDef = defArray.getJsonObject(idx);
+                               searchResult.append(((idx+1)+".")+curDef.getString("definition")+"\n\n");
+                           }
+                        } catch (Throwable t){
+                          Log.e("Error","Could not parse");
+                       }
 
                         //searchResult.setText(resp.toString());
                         System.err.println(response);

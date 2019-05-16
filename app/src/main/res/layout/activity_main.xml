@@ -19,15 +19,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/definitionTxt"
-        android:layout_width="278dp"
-        android:layout_height="470dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="148dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/lblTitle"
         android:layout_width="213dp"
         android:layout_height="28dp"
@@ -46,4 +37,27 @@
         android:text="@android:string/search_go"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="382dp"
+        android:layout_height="570dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="148dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/definitionTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="0dp" />
+        </LinearLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

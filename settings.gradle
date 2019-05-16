@@ -1,1 +1,1 @@
-include ':app', ':javax.json-api-1.0'
+include ':app'

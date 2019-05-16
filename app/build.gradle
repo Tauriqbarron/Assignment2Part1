@@ -29,6 +29,5 @@ dependencies {
     implementation fileTree(dir: 'C:\\Users\\tauri\\Documents\\Assignment2Part1', include: ['*.aar', '*.jar'], exclude: [])
     implementation fileTree(dir: 'C:\\Users\\tauri\\Documents\\Assignment2Part1\\jsonp_1.1_api', include: ['*.aar', '*.jar'], exclude: [])
     implementation fileTree(dir: 'C:\\Users\\tauri\\Documents\\Assignment2Part1\\jsonp_1.1_api\\main\\java\\javax\\json', include: ['*.aar', '*.jar'], exclude: [])
-
-
+    implementation 'org.glassfish:javax.json:1.1.4'
 }
